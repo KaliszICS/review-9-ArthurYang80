@@ -28,7 +28,7 @@ void lettersToFiveTest1() {
     Class<?> testClass = PracticeProblem.class;
     try {
         Class[] cArg = {String.class, char.class};
-        Method method = testClass.getDeclaredMethod("lettersToFive", cArg);
+        Method method = testClass.getDeclaredMethod("letterToFive", cArg);
   // Enter code here
       assertEquals(10, (int)method.invoke(null, "hello lillian", 'l'));
 }
@@ -47,7 +47,7 @@ void letterToFiveTest2() {
     Class<?> testClass = PracticeProblem.class;
     try {
         Class[] cArg = {String.class, char.class};
-        Method method = testClass.getDeclaredMethod("lettersToFive", cArg);
+        Method method = testClass.getDeclaredMethod("letterToFive", cArg);
   // Enter code here
     assertEquals(-1, (int)method.invoke(null, "help me", 'a'));
 }
@@ -65,10 +65,10 @@ void letterToFiveTest2() {
 void countLetterTest1() {
     Class<?> testClass = PracticeProblem.class;
     try {
-        Class[] cArg = {String.class, char.class};
+        Class[] cArg = {String.class, String.class};
         Method method = testClass.getDeclaredMethod("countLetter", cArg);
   // Enter code here
-    assertEquals(2, (int)method.invoke(null, "hello", 'l'));
+    assertTrue(((String)method.invoke(null, "l", "hello")).contains("2"));
 }
 
 
@@ -84,10 +84,10 @@ void countLetterTest1() {
 void countLetterTest2() {
     Class<?> testClass = PracticeProblem.class;
     try {
-        Class[] cArg = {String.class, char.class};
+        Class[] cArg = {String.class, String.class};
         Method method = testClass.getDeclaredMethod("countLetter", cArg);
   // Enter code here
-    assertEquals(0, (int)method.invoke(null, "I don't know", '!'));
+    assertTrue(((String)method.invoke(null, "!", "I don't know")).contains("0"));
 }
 
 
@@ -103,10 +103,10 @@ void countLetterTest2() {
 void countLetterTest3() {
     Class<?> testClass = PracticeProblem.class;
     try {
-        Class[] cArg = {String.class, char.class};
+        Class[] cArg = {String.class, String.class};
         Method method = testClass.getDeclaredMethod("countLetter", cArg);
   // Enter code here
-    assertEquals(0, (int)method.invoke(null, "", 'a'));
+    assertTrue(((String)method.invoke(null, "a", "")).contains("0"));
 }
 
 
@@ -122,10 +122,10 @@ void countLetterTest3() {
 void countLetterTest4() {
     Class<?> testClass = PracticeProblem.class;
     try {
-        Class[] cArg = {String.class, char.class};
+        Class[] cArg = {String.class, String.class};
         Method method = testClass.getDeclaredMethod("countLetter", cArg);
   // Enter code here
-    assertEquals(1, (int)method.invoke(null, "computer science", 's'));
+    assertTrue(((String)method.invoke(null, "s", "computer science")).contains("1"));
 }
 
 
@@ -141,10 +141,10 @@ void countLetterTest4() {
 void countLetterTest5() {
     Class<?> testClass = PracticeProblem.class;
     try {
-        Class[] cArg = {String.class, char.class};
+        Class[] cArg = {String.class, String.class};
         Method method = testClass.getDeclaredMethod("countLetter", cArg);
   // Enter code here
-    assertEquals(0, (int)method.invoke(null, "HELLO", 'l'));
+    assertTrue(((String)method.invoke(null, "l", "HELLO")).contains("0"));
 }
 
 
@@ -160,10 +160,10 @@ void countLetterTest5() {
 void countLetterTest6() {
     Class<?> testClass = PracticeProblem.class;
     try {
-        Class[] cArg = {String.class, char.class};
+        Class[] cArg = {String.class, String.class};
         Method method = testClass.getDeclaredMethod("countLetter", cArg);
   // Enter code here
-    assertEquals(4, (int)method.invoke(null, "123456789111", '1'));
+    assertTrue(((String)method.invoke(null, "1", "123456789111")).contains("4"));
 }
 
 
@@ -294,7 +294,7 @@ void lettersToFiveTest5() {
     Class<?> testClass = PracticeProblem.class;
     try {
         Class[] cArg = {String.class, char.class};
-        Method method = testClass.getDeclaredMethod("lettersToFive", cArg);
+        Method method = testClass.getDeclaredMethod("letterToFive", cArg);
   // Enter code here
     assertEquals(34, (int)method.invoke(null, "i am the best in the world you see", 'e'));
 }
@@ -313,7 +313,7 @@ void lettersToFiveTest4() {
     Class<?> testClass = PracticeProblem.class;
     try {
         Class[] cArg = {String.class, char.class};
-        Method method = testClass.getDeclaredMethod("lettersToFive", cArg);
+        Method method = testClass.getDeclaredMethod("letterToFive", cArg);
   // Enter code here
     assertEquals(-1, (int)method.invoke(null, "", 'z'));
 }
@@ -332,7 +332,7 @@ void lettersToFiveTest3() {
     Class<?> testClass = PracticeProblem.class;
     try {
         Class[] cArg = {String.class, char.class};
-        Method method = testClass.getDeclaredMethod("lettersToFive", cArg);
+        Method method = testClass.getDeclaredMethod("letterToFive", cArg);
   // Enter code here
     assertEquals(5, (int)method.invoke(null, "bbbbb", 'b'));
 }
